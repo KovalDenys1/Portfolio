@@ -388,6 +388,34 @@ footer a:hover{
     .timeline-item-content {
         width: 42.5%;
     }
+    .timeline {
+        display: none;
+    }
+    .timeline-item-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+        background-color: #666;
+        color: white;
+        padding: 0.75rem;
+        width: 100%;
+    }
+    .timeline-item-left {
+        justify-content: flex-start;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .timeline-item-right {
+        justify-content: flex-start;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .dot {
+        display: none;
+    }
     .footer{
         padding: 2rem 1.25rem;
         gap: 1.25rem;
