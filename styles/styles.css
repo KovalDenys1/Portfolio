@@ -313,6 +313,9 @@ footer a:hover{
     }
 }
 @media screen and (max-width: 767px) {
+    .header{
+        min-height: 0px;
+    }
     .nav_menu{
         padding: 1.25rem;
     }
@@ -340,11 +343,15 @@ footer a:hover{
         display: list-item;
         padding: 1rem 0.25rem;
     }
+    .container_1, .container_2, .container_3{
+        min-height: 0px;
+    }
     .container_1 {
         padding: 1.25rem;
         flex-grow: 1;
         gap: 1rem;
         justify-content: center;
+        align-items: center;
     }
     .container_1 .img_wrapper{
         display: none;
@@ -368,13 +375,14 @@ footer a:hover{
         font-weight: 500;
     }
     .projects_text{
-        padding: 1.25rem;
+        padding: 0.75rem;
     }
     .gallery_wrapper{
-        padding: 1.25rem 1.25rem;
+        padding: 0.5rem 1.25rem 1rem 1.25rem;
     }
     .gallery {
         grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
     }
     .item_3, .item_4, .item_5, .item_6{
         display: none;
@@ -402,6 +410,7 @@ footer a:hover{
         color: white;
         padding: 0.75rem;
         width: 100%;
+        font-size: clamp(0.75rem, 2vw, 5rem);
     }
     .timeline-item-left {
         justify-content: flex-start;
