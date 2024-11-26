@@ -49,56 +49,35 @@ console.log(`
 `);
 
 
-const hamburger = document.querySelector(".hamburger");
-const navButtons = document.querySelector(".nav_buttons");
-const body = document.body;
+const hamburger = document.querySelector(".hamburger");  // Находим элемент гамбургера (кнопка меню)
+const navButtons = document.querySelector(".nav_buttons");  // Находим меню навигации
+const body = document.body;  // Получаем тело страницы для изменения прокрутки
 
-hamburger.addEventListener("click", () => {
-    // Toggle active classes for the hamburger and nav menu
-    hamburger.classList.toggle("active");
-    navButtons.classList.toggle("active");
+hamburger.addEventListener("click", () => {  // Добавляем слушатель события на клик по кнопке меню
+    hamburger.classList.toggle("active");  // Переключаем класс "active" для гамбургера (для анимации или изменения внешнего вида)
+    navButtons.classList.toggle("active");  // Переключаем класс "active" для меню навигации
 
-    // Disable or enable page scrolling based on the menu state
-    if (navButtons.classList.contains("active")) {
-        body.style.overflow = "hidden";  // Disable scrolling
-    } else {
-        body.style.overflow = "auto";  // Enable scrolling
+    if (navButtons.classList.contains("active")) {  // Если меню активно
+        body.style.overflow = "hidden";  // Отключаем прокрутку страницы
+    } else {  // Если меню не активно
+        body.style.overflow = "auto";  // Включаем прокрутку страницы
     }
 });
 
-// Close the menu when clicking on any nav link
-document.querySelectorAll(".nav_link").forEach(n => n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navButtons.classList.remove("active");
+document.querySelectorAll(".nav_link").forEach(n => n.addEventListener("click", () => {  // Добавляем слушатель событий на все ссылки в меню
+    hamburger.classList.remove("active");  // Убираем класс "active" у гамбургера
+    navButtons.classList.remove("active");  // Убираем класс "active" у меню
 
-    // Re-enable scrolling when the menu is closed
-    body.style.overflow = "auto";
+    body.style.overflow = "auto";  // Включаем прокрутку страницы при закрытии меню
 }));
+document.getElementById("contact").addEventListener("click", function(event) {  // Повторно добавляем слушатель на кнопку контакта
+    event.preventDefault();  // Предотвращаем стандартное поведение ссылки (переход)
 
+    var contact_box1 = document.getElementById("contact_box1");  // Находим первый div по id
+    var contact_box2 = document.getElementById("contact_box2");  // Находим второй div по id
 
+    contact_box1.innerHTML = "<p>Content has been changed!</p>";  // Меняем содержимое первого div на новый текст
+    contact_box2.innerHTML = "<p>Content has been changed!</p>";  // Меняем содержимое второго div на новый текст
 
-// Получаем элементы
-const modal = document.getElementById("modal");
-const link = document.getElementById("contact"); // Изменено на contact
-const span = document.getElementsByClassName("close")[0];
-
-// Открываем модальное окно при нажатии на ссылку
-link.onclick = function(event) {
-    event.preventDefault(); // Предотвращаем переход по ссылке
-    modal.style.display = "block";
-    document.body.style.overflow = "hidden"; // Запрещаем прокрутку страницы
-}
-
-// Закрываем модальное окно при нажатии на "×"
-span.onclick = function() {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto"; // Включаем прокрутку страницы
-}
-
-// Закрываем модальное окно при клике вне его
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto"; // Включаем прокрутку страницы
-    }
-}
+    contact_box1.style.backgroundColor = "#f0f0f0"; // изменяем фон
+});
