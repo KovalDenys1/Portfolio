@@ -12,6 +12,22 @@ html{
     font-size: clamp(2rem, 2vw, 5rem);
     color: #000000;
 }
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }  
 .header{
     display: flex;
     flex-direction: column;
@@ -199,6 +215,77 @@ main{
 .gallery_item img:hover {
     filter: brightness(0.9) saturate(1.2);
 }
+
+/* Стиль для модального окна */
+.modal {
+    display: none; /* Изначально окно скрыто */
+    position: fixed; /* Фиксированное позиционирование */
+    z-index: 1; /* Окно будет поверх контента */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+  }
+  
+  /* Стили для содержимого модального окна */
+  .modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    height: 80%; /* Максимальная высота окна — 80% от высоты окна браузера */
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
+  }
+  
+/* Для браузеров на основе Webkit (Chrome, Safari, Edge) */
+.modal-content::-webkit-scrollbar {
+    width: 20px; /* Ширина скроллбара */
+  }
+  
+  .modal-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Цвет фона скроллбара */
+    border-radius: 10px; /* Скругление углов */
+  }
+  
+  .modal-content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Цвет ползунка */
+    border-radius: 10px; /* Скругление ползунка */
+  }
+  
+  .modal-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Цвет ползунка при наведении */
+  }
+
+  /* Кнопка закрытия */
+  .close {
+    color: #aaa;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Стили для картинок внутри модального окна */
+  .modal-image {
+    height: 50%;
+    width: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Стили для картинок, которые открывают модальное окно */
+  .clickable-image {
+    cursor: pointer;
+  }
+  
 .timeline-container {
     flex-grow: 1;
     position: relative;

@@ -89,7 +89,7 @@ const positions = [
     { x: '-7%', y: '20%' }, // Квадрат
     { x: '91%', y: '97%' }, // Круг
     { x: '62.5%', y: '82.5%' }, // Квадрат
-    { x: '80%', y: '15%' }, // Круг
+    { x: '80%', y: '17.5%' }, // Круг
     { x: '-3%', y: '95%' }, // Квадрат - последняя фигура для телефона
     { x: '35%', y: '75%' }, // Круг
     { x: '12.5%', y: '85%' }, // Квадрат
@@ -143,3 +143,65 @@ function moveShapes(event) {
 // Инициализация
 createShapes();
 window.addEventListener('mousemove', moveShapes);
+
+// Получаем элементы
+var modal = document.getElementById("modal");
+var closeModal = document.getElementById("closeModal");
+var modalTitle = document.getElementById("modalTitle");
+var modalImages = document.getElementById("modalImages");
+var modalText = document.getElementById("modalText");
+
+// Получаем все картинки, которые открывают модальное окно
+var clickableImages = document.querySelectorAll(".clickable-image");
+
+// Функция для открытия модального окна
+function openModal(event) {
+  var clickedImage = event.target;
+  
+  // Получаем данные из атрибутов картинок
+  var title = clickedImage.getAttribute("data-title");
+  var text = clickedImage.getAttribute("data-info");
+  var images = clickedImage.getAttribute("data-images").split(",");
+  
+  // Обновляем заголовок, текст и изображения в модальном окне
+  modalTitle.textContent = title;
+  modalText.textContent = text;
+  modalImages.innerHTML = ""; // Очищаем предыдущие изображения
+  
+  images.forEach(function(image) {
+    var imgElement = document.createElement("img");
+    imgElement.src = image;
+    imgElement.alt = "Изображение в модальном окне";
+    imgElement.classList.add("modal-image");
+    modalImages.appendChild(imgElement);
+  });
+
+  // Отключаем прокрутку страницы
+  document.body.style.overflow = "hidden";
+  
+  // Отображаем модальное окно
+  modal.style.display = "block";
+}
+
+// Функция для закрытия модального окна
+function closeModalWindow() {
+  modal.style.display = "none";
+  
+  // Включаем прокрутку страницы обратно
+  document.body.style.overflow = "auto";
+}
+
+// Закрытие модального окна при клике на крестик
+closeModal.onclick = closeModalWindow;
+
+// Закрытие модального окна при клике вне его
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModalWindow();
+  }
+}
+
+// Добавляем обработчик событий для всех кликабельных картинок
+clickableImages.forEach(function(image) {
+  image.addEventListener("click", openModal);
+});
