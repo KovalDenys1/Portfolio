@@ -18,6 +18,38 @@ html{
     width: 100%;
     height: 100vh;
     min-height: 900px;
+    color: rgb(0, 0, 0);
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg, #ffffff, #ffffff);
+    overflow: hidden;
+    z-index: -1;
+}
+.shape {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2.5px solid rgba(0, 0, 0, 0.7); /* Только обводка */
+    border-radius: 50%; /* Для круга */
+    pointer-events: none; /* Игнорируем клики */
+    transition: transform 0.7s ease-out; /* Плавное движение */
+}
+/* Для квадратов */
+.shape.square {
+    border-radius: 0; /* Убираем скругление */
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 .logo img{
     height: 2rem;
@@ -235,6 +267,9 @@ footer a:hover{
     color: rgb(80, 80, 80);
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .shape:nth-child(n+8) { /* Оставляем только 7 фигур */
+        display: none;
+    }
     .nav_menu{
         padding: 1.25rem;
     }
@@ -253,6 +288,9 @@ footer a:hover{
     }
     .projects_text{
         padding: 1.25rem;
+    }
+    .gallery_wrapper{
+        padding: 0rem 1.25rem 1.25rem 1.25rem;
     }
     .gallery {
         grid-template-columns: repeat(2, 1fr);
@@ -278,6 +316,9 @@ footer a:hover{
     }
 }
 @media screen and (max-width: 767px) {
+    .shape:nth-child(n+6) { /* Оставляем только первые 5 фигур */
+        display: none;
+    }
     .header{
         min-height: 0px;
     }

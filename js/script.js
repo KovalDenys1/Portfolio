@@ -81,3 +81,65 @@ document.getElementById("contact").addEventListener("click", function(event) {  
 
     contact_box1.style.backgroundColor = "#f0f0f0"; // изменяем фон
 });
+
+const background = document.querySelector('.background');
+
+// Фиксированные позиции фигур
+const positions = [
+    { x: '-7%', y: '20%' }, // Квадрат
+    { x: '91%', y: '97%' }, // Круг
+    { x: '62.5%', y: '82.5%' }, // Квадрат
+    { x: '80%', y: '15%' }, // Круг
+    { x: '-3%', y: '95%' }, // Квадрат - последняя фигура для телефона
+    { x: '35%', y: '75%' }, // Круг
+    { x: '12.5%', y: '85%' }, // Квадрат
+    { x: '15%', y: '20%' }, // Круг
+    { x: '40%', y: '45%' }, // Квадрат
+    { x: '55%', y: '20%' }, // Круг
+    { x: '75%', y: '50%' }, // Квадрат
+    { x: '95%', y: '65%' }, // Круг
+    { x: '35%', y: '5%' }, // Квадрат
+    { x: '2.5%', y: '2.5%' }  // Круг
+];
+
+// Функция для создания фигур
+function createShapes() {
+    positions.forEach((pos, index) => {
+        const shape = document.createElement('div');
+        shape.classList.add('shape');
+
+        // Устанавливаем начальные позиции
+        shape.style.left = pos.x;
+        shape.style.top = pos.y;
+
+        // Добавляем форму (круги или квадраты)
+        if (index % 2 === 0) {
+            shape.classList.add('square'); // Квадраты
+        }
+
+        background.appendChild(shape);
+    });
+}
+
+// Функция для движения фигур при перемещении курсора
+function moveShapes(event) {
+    const { clientX, clientY } = event;
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    const shapes = document.querySelectorAll('.shape');
+
+    shapes.forEach((shape, index) => {
+        const offsetX = ((clientX - centerX) / window.innerWidth) * 75; // Сдвиг по X
+        const offsetY = ((clientY - centerY) / window.innerHeight) * 75; // Сдвиг по Y
+
+        // Разный коэффициент для разнообразия движения
+        const speed = (index + 1) / 5;
+
+        shape.style.transform = `translate(${offsetX * speed}px, ${offsetY * speed}px)`;
+    });
+}
+
+// Инициализация
+createShapes();
+window.addEventListener('mousemove', moveShapes);
