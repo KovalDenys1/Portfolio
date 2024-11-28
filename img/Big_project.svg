@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_1" data-name="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #231f20;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+        font-family: LeagueSpartan-Regular, 'League Spartan';
+        font-size: 32px;
+        font-variation-settings: 'wght' 400;
+      }
+    </style>
+  </defs>
+  <rect id="_6" data-name="6" class="cls-1" y="0" width="400" height="400"/>
+  <rect id="_5" data-name="5" class="cls-1" x="-399.79" y="0" width="400" height="400"/>
+  <g id="Lines">
+    <line class="cls-2" x1="-188.5" y1="400" x2="85.24" y2="-400"/>
+    <line class="cls-2" x1="85.24" y1="134.73" x2="8.13" y2="400"/>
+    <polyline class="cls-2" points="-32.99 400 -102.78 149.47 400 110.04"/>
+    <polyline class="cls-2" points="96.21 -159.52 234.26 123.04 318.79 -92.16"/>
+    <polyline class="cls-2" points="64.21 207.06 226.61 400 400 169.98"/>
+  </g>
+  <text class="cls-3" transform="translate(129.67 209.76)"><tspan x="0" y="0">Big project</tspan></text>
+</svg>

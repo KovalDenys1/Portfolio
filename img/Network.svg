@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_1" data-name="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #231f20;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+        font-family: LeagueSpartan-Regular, 'League Spartan';
+        font-size: 32px;
+        font-variation-settings: 'wght' 400;
+      }
+    </style>
+  </defs>
+  <rect id="_6" data-name="6" class="cls-1" x="399.75" y="0" width="400" height="400"/>
+  <rect id="_5" data-name="5" class="cls-1" x="-.05" y="0" width="400" height="400"/>
+  <rect id="_4" data-name="4" class="cls-1" x="-399.75" y="0" width="400" height="400"/>
+  <g id="Lines">
+    <line class="cls-2" x1="-147.85" y1="-400" x2="47.84" y2="400"/>
+    <line class="cls-2" x1="211.25" y1="400" x2="484.99" y2="-400"/>
+    <line class="cls-2" x1="162.01" y1="-400" x2="-118.55" y2="111.39"/>
+    <line class="cls-2" x1="-264.44" y1="-103.26" x2="28.4" y2="327.62"/>
+    <line class="cls-2" x1="351.98" y1="-196.09" x2="-90.68" y2="152.41"/>
+    <line class="cls-2" x1="60.22" y1="33.61" x2="184.26" y2="400"/>
+    <polyline class="cls-2" points="366.75 400 296.97 149.47 799.75 110.04"/>
+    <line class="cls-2" x1="313.78" y1="100.35" x2="-110.65" y2="-322.83"/>
+  </g>
+  <text class="cls-3" transform="translate(145.12 209.76)"><tspan x="0" y="0">Network</tspan></text>
+</svg>

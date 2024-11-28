@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_1" data-name="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #231f20;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+        font-family: LeagueSpartan-Regular, 'League Spartan';
+        font-size: 32px;
+        font-variation-settings: 'wght' 400;
+      }
+    </style>
+  </defs>
+  <rect id="_5" data-name="5" class="cls-1" x="399.7" y="0" width="400" height="400"/>
+  <rect id="_4" data-name="4" class="cls-1" y="0" width="400" height="400"/>
+  <g id="Lines">
+    <line class="cls-2" x1="251.89" y1="-400" x2="447.58" y2="400"/>
+    <line class="cls-2" x1="561.75" y1="-400" x2="281.19" y2="111.39"/>
+    <line class="cls-2" x1="135.31" y1="-103.26" x2="428.14" y2="327.62"/>
+    <line class="cls-2" x1="0" y1="300.38" x2="185.62" y2="-29.22"/>
+    <line class="cls-2" x1="343.8" y1="203.52" x2="167.98" y2="400"/>
+    <line class="cls-2" x1="751.72" y1="-196.09" x2="309.07" y2="152.41"/>
+    <line class="cls-2" x1="0" y1="79.01" x2="178.34" y2="388.42"/>
+    <line class="cls-2" x1="713.52" y1="100.35" x2="289.1" y2="-322.83"/>
+  </g>
+  <text class="cls-3" transform="translate(118.4 209.76)"><tspan x="0" y="0">Web hosting</tspan></text>
+</svg>
