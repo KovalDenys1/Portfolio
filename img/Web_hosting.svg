@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_1" data-name="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<svg id="WH" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
   <defs>
     <style>
       .cls-1 {
@@ -9,7 +9,7 @@
       .cls-2 {
         fill: none;
         stroke: #231f20;
-        stroke-linecap: square;
+        stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 5px;
       }
@@ -22,17 +22,19 @@
       }
     </style>
   </defs>
-  <rect id="_5" data-name="5" class="cls-1" x="399.7" y="0" width="400" height="400"/>
-  <rect id="_4" data-name="4" class="cls-1" y="0" width="400" height="400"/>
-  <g id="Lines">
-    <line class="cls-2" x1="251.89" y1="-400" x2="447.58" y2="400"/>
-    <line class="cls-2" x1="561.75" y1="-400" x2="281.19" y2="111.39"/>
-    <line class="cls-2" x1="135.31" y1="-103.26" x2="428.14" y2="327.62"/>
-    <line class="cls-2" x1="0" y1="300.38" x2="185.62" y2="-29.22"/>
-    <line class="cls-2" x1="343.8" y1="203.52" x2="167.98" y2="400"/>
-    <line class="cls-2" x1="751.72" y1="-196.09" x2="309.07" y2="152.41"/>
-    <line class="cls-2" x1="0" y1="79.01" x2="178.34" y2="388.42"/>
-    <line class="cls-2" x1="713.52" y1="100.35" x2="289.1" y2="-322.83"/>
+  <g id="BG">
+    <rect id="_6" data-name="6" class="cls-1" x="0" y="0" width="400" height="400"/>
+    <rect id="_5" data-name="5" class="cls-1" x="-399.79" y="0" width="400" height="400"/>
+    <rect id="_3" data-name="3" class="cls-1" x="0" y="-400" width="400" height="400"/>
+    <rect id="_2" data-name="2" class="cls-1" x="-399.79" y="-400" width="400" height="400"/>
   </g>
-  <text class="cls-3" transform="translate(118.4 209.76)"><tspan x="0" y="0">Web hosting</tspan></text>
+  <g id="Text">
+    <text class="cls-3" transform="translate(118.4 209.89)"><tspan x="0" y="0">Web hosting</tspan></text>
+  </g>
+  <line class="cls-2" x1="-188.55" y1="400" x2="85.19" y2="-400"/>
+  <line class="cls-2" x1="85.19" y1="134.73" x2="8.08" y2="400"/>
+  <polyline class="cls-2" points="-33.04 400 -102.82 149.47 399.95 110.04"/>
+  <polyline class="cls-2" points="96.16 -159.52 234.21 123.04 318.74 -92.16"/>
+  <polyline class="cls-2" points="64.17 207.06 226.56 400 399.95 169.98"/>
+  <rect class="cls-2" x="-799.49" y="-400" width="1199.49" height="800"/>
 </svg>
