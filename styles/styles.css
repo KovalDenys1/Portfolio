@@ -345,10 +345,13 @@ footer{
     flex-direction: column;
     gap: 0.5rem;
     padding: 2rem 1.25rem;
+    background-color: #666;
+    color: white;
+    font-weight: 500;
 }
 footer a{
     text-decoration: underline;
-    color: black;
+    color: white;
 }
 footer a:hover{
     color: rgb(80, 80, 80);

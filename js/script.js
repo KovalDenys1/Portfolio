@@ -70,17 +70,34 @@ document.querySelectorAll(".nav_link").forEach(n => n.addEventListener("click", 
 
     body.style.overflow = "auto";  // Включаем прокрутку страницы при закрытии меню
 }));
-document.getElementById("contact").addEventListener("click", function(event) {  // Повторно добавляем слушатель на кнопку контакта
-    event.preventDefault();  // Предотвращаем стандартное поведение ссылки (переход)
+let isContactActive = false; // Флаг для отслеживания состояния
 
-    var contact_box1 = document.getElementById("contact_box1");  // Находим первый div по id
-    var contact_box2 = document.getElementById("contact_box2");  // Находим второй div по id
+// Сохраняем изначальные состояния
+const contactBox1 = document.getElementById("contact_box1");
+const contactBox2 = document.getElementById("contact_box2");
 
-    contact_box1.innerHTML = "<p>Content has been changed!</p>";  // Меняем содержимое первого div на новый текст
-    contact_box2.innerHTML = "<p>Content has been changed!</p>";  // Меняем содержимое второго div на новый текст
+const originalContentBox1 = contactBox1.innerHTML; // Сохраняем исходное содержимое первого div
+const originalContentBox2 = contactBox2.innerHTML; // Сохраняем исходное содержимое второго div
+const originalBackgroundColorBox1 = contactBox1.style.backgroundColor; // Сохраняем исходный фон первого div
 
-    contact_box1.style.backgroundColor = "#f0f0f0"; // изменяем фон
+document.getElementById("contact").addEventListener("click", function(event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+
+    if (!isContactActive) {
+        // Если состояние "Контакт" не активно, меняем содержимое
+        contactBox1.innerHTML = "<p>(Info about me)</p>"; 
+        contactBox2.innerHTML = "<p>(Contact form)</p>";
+        contactBox1.style.backgroundColor = "#f0f0f0"; // Изменяем фон
+        isContactActive = true; // Обновляем флаг
+    } else {
+        // Если состояние "Контакт" активно, восстанавливаем исходное содержимое и стиль
+        contactBox1.innerHTML = originalContentBox1; // Возвращаем содержимое
+        contactBox2.innerHTML = originalContentBox2; // Возвращаем содержимое
+        contactBox1.style.backgroundColor = originalBackgroundColorBox1; // Возвращаем фон
+        isContactActive = false; // Обновляем флаг
+    }
 });
+
 
 const background = document.querySelector('.background');
 
@@ -171,7 +188,7 @@ function openModal(event) {
   images.forEach(function(image) {
     var imgElement = document.createElement("img");
     imgElement.src = image;
-    imgElement.alt = "Изображение в модальном окне";
+    imgElement.alt = "Image in modal window";
     imgElement.classList.add("modal-image");
     modalImages.appendChild(imgElement);
   });
