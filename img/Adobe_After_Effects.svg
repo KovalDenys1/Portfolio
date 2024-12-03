@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_1" data-name="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<svg id="AAE" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
   <defs>
     <style>
       .cls-1 {
@@ -36,5 +36,4 @@
   <line class="cls-2" x1="344.8" y1="0" x2="26.81" y2="170.62"/>
   <line class="cls-2" x1="399.95" y1="332.42" x2="11.66" y2="214.91"/>
   <line class="cls-2" x1="266.19" y1="42.18" x2="399.95" y2="210.51"/>
-  <rect class="cls-2" x="-799.49" y="0" width="1199.49" height="800"/>
 </svg>
