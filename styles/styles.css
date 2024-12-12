@@ -151,7 +151,7 @@ nav a:hover{
     padding: 0rem;
 }
 .intro_text, .img_wrapper {
-    transition: transform 1s ease-out, opacity 1s ease-out;
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
   }
   .intro_text.slide-out, .img_wrapper.slide-out {
     transform: translateY(100%); /* Hiding the block downward */

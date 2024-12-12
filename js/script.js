@@ -122,68 +122,59 @@ document.getElementById("contact").addEventListener("click", function(event) {
             </form>
         `;
 
-    // Add classes for hiding content animation
-contactBox1.classList.add("slide-out");
-contactBox2.classList.add("slide-out");
+        contactBox1.classList.add("slide-out");
+        contactBox2.classList.add("slide-out");
 
-// Wait for the animation to complete, then update the content
-setTimeout(() => {
-    // Update the content
-    contactBox1.classList.remove("slide-out");
-    contactBox2.classList.remove("slide-out");
+        setTimeout(() => {
+            contactBox1.classList.remove("slide-out");
+            contactBox2.classList.remove("slide-out");
 
-    // Apply the fade-in animation
-    contactBox1.classList.add("slide-in");
-    contactBox2.classList.add("slide-in");
+            contactBox1.classList.add("slide-in");
+            contactBox2.classList.add("slide-in");
 
-    // Update the styles
-    contactBox1.style.padding = "1rem";
-    contactBox2.style.padding = "1rem";
-    contactBox2.style.justifyContent = "center";
-    contactBox2.style.alignItems = "center";
-    contactBox1.style.background = "#505050";
-    contactBox2.style.background = "#505050";
-    contactBox1.style.color = "#ffffff";
-    contactBox2.style.color = "#ffffff";
-    contactBox1.style.boxShadow = "0 12px 20px rgba(0, 0, 0, 0.8)";
-    contactBox2.style.boxShadow = "0 12px 20px rgba(0, 0, 0, 0.8)";
+            contactBox1.style.padding = "1rem";
+            contactBox2.style.padding = "1rem";
+            contactBox2.style.justifyContent = "center";
+            contactBox2.style.alignItems = "center";
+            contactBox1.style.background = "#505050";
+            contactBox2.style.background = "#505050";
+            contactBox1.style.color = "#ffffff";
+            contactBox2.style.color = "#ffffff";
+            contactBox1.style.boxShadow = "0 12px 20px rgba(0, 0, 0, 0.8)";
+            contactBox2.style.boxShadow = "0 12px 20px rgba(0, 0, 0, 0.8)";
+            
+            isContactActive = true; // Update the flag
+        }, 700); // 700 ms
+    } else {
+        contactBox1.innerHTML = originalContentBox1; // Restore the content
+        contactBox2.innerHTML = originalContentBox2; // Restore the content
 
-    isContactActive = true; // Update the flag
-}, 500); // 500 ms — duration of the hide animation
-} else {
-    // If the "Contact" state is active, restore the original content and style
-    contactBox1.innerHTML = originalContentBox1; // Restore the content
-    contactBox2.innerHTML = originalContentBox2; // Restore the content
+        contactBox1.classList.add("slide-out");
+        contactBox2.classList.add("slide-out");
 
-    // Add classes for hiding content animation
-    contactBox1.classList.add("slide-out");
-    contactBox2.classList.add("slide-out");
+        setTimeout(() => {
+            contactBox1.classList.remove("slide-out");
+            contactBox2.classList.remove("slide-out");
 
-    // Wait for the animation to complete, then update the content
-    setTimeout(() => {
-        // Update the content
-        contactBox1.classList.remove("slide-out");
-        contactBox2.classList.remove("slide-out");
+            contactBox1.classList.add("slide-in");
+            contactBox2.classList.add("slide-in");
 
-        // Apply the fade-in animation
-        contactBox1.classList.add("slide-in");
-        contactBox2.classList.add("slide-in");
+            contactBox1.style.padding = originalPaddingBox1;
+            contactBox2.style.padding = originalPaddingBox2;
+            contactBox1.style.background = originalbackgroundBox1;
+            contactBox2.style.background = originalbackgroundBox2;
+            contactBox1.style.color = originalcolorBox1;
+            contactBox2.style.color = originalcolorBox2;
+            contactBox2.style.justifyContent = originaljustifyContentBox2;
+            contactBox2.style.alignItems = originalalignItemsBox2;
+            contactBox1.style.boxShadow = originalBoxShadowBox1;
+            contactBox2.style.boxShadow = originalBoxShadowBox2;
 
-        // Restore the styles
-        contactBox1.style.padding = originalPaddingBox1;
-        contactBox2.style.padding = originalPaddingBox2;
-        contactBox1.style.background = originalbackgroundBox1;
-        contactBox2.style.background = originalbackgroundBox2;
-        contactBox1.style.color = originalcolorBox1;
-        contactBox2.style.color = originalcolorBox2;
-        contactBox2.style.justifyContent = originaljustifyContentBox2;
-        contactBox2.style.alignItems = originalalignItemsBox2;
-        contactBox1.style.boxShadow = originalBoxShadowBox1;
-        contactBox2.style.boxShadow = originalBoxShadowBox2;
+            isContactActive = false; // Update the flag
+        }, 700); // 700 ms
+    }
+});
 
-        isContactActive = false; // Update the flag
-    }, 1000); // 1000 ms — duration of the hide animation
-}
 
 const background = document.querySelector('.background');
 // Fixed positions for the shapes
