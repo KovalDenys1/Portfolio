@@ -143,11 +143,13 @@ document.getElementById("contact").addEventListener("click", function(event) {
             contactBox1.style.boxShadow = "0 12px 20px rgba(0, 0, 0, 0.8)";
             contactBox2.style.boxShadow = "0 12px 20px rgba(0, 0, 0, 0.8)";
             
+            contactBox1.classList.remove("slide-in");
+            contactBox2.classList.remove("slide-in");
+
             isContactActive = true; // Update the flag
-        }, 700); // 700 ms
+        }, 500); // 500 ms
     } else {
-        contactBox1.innerHTML = originalContentBox1; // Restore the content
-        contactBox2.innerHTML = originalContentBox2; // Restore the content
+
 
         contactBox1.classList.add("slide-out");
         contactBox2.classList.add("slide-out");
@@ -158,6 +160,9 @@ document.getElementById("contact").addEventListener("click", function(event) {
 
             contactBox1.classList.add("slide-in");
             contactBox2.classList.add("slide-in");
+
+            contactBox1.innerHTML = originalContentBox1; // Restore the content
+            contactBox2.innerHTML = originalContentBox2; // Restore the content
 
             contactBox1.style.padding = originalPaddingBox1;
             contactBox2.style.padding = originalPaddingBox2;
@@ -170,8 +175,11 @@ document.getElementById("contact").addEventListener("click", function(event) {
             contactBox1.style.boxShadow = originalBoxShadowBox1;
             contactBox2.style.boxShadow = originalBoxShadowBox2;
 
+            contactBox1.classList.remove("slide-in");
+            contactBox2.classList.remove("slide-in");
+
             isContactActive = false; // Update the flag
-        }, 700); // 700 ms
+        }, 500); // 500 ms
     }
 });
 
