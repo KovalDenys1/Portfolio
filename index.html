@@ -11,114 +11,94 @@
 </head>
 <body>
 
-    <!-- Forsiden er plassert helt innenfor header-taggen. ↓ -->
+<!-- Header ↓ -->
 
-    <header class="header">
+<header class="header">
 
-        <!-- Navigasjonsmeny ↓  Navigasjonen tilpasses størrelsen på nettstedet.
-        På mobile enheter med skjermstørrelse fra 767px vises en menyknepp 
-        som må trykkes på for at menyen skal dukke opp, 
-        og denne er implementert ved hjelp av CSS og JS. -->
-        <div class="background"></div>
-        <nav class="nav_menu">
-        <div class="logo">
-            <a href="#home"><img src="img/Logo.png"></a>
+    <!-- Header's background ↓ -->
+    <div class="background"></div>
+    <!-- Navigation menu ↓ -->
+    <nav class="nav_menu">
+    <div class="logo">
+        <a href="#home"><img src="img/Logo.png"></a>
+    </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <div class="nav_buttons">
-            <ul>
-                <li><a href="#projects" class="nav_link">Projects</a></li>
-                <li><a href="#education" class="nav_link">Education</a></li>
-                <li><a href="#" class="nav_link" id="contact">About me</a></li>
-            </ul>
-        </div>
-        </nav>
+        <div class="nav_buttons">
+        <ul>
+            <li><a href="#projects" class="nav_link">Projects</a></li>
+            <li><a href="#education" class="nav_link">Education</a></li>
+            <li><a href="#" class="nav_link" id="contact">About me</a></li>
+        </ul>
+    </div>
+    </nav>
+    <!-- Text and image ↓ -->
+<div class="container_1">
+    <div class="intro_text" id="contact_box1">
+        <p class="text_1">Hi, I am Denys Koval</p>
+        <p class="text_2">Student specializing in IT</p>
+        <p class="text_3">I am passionate about harnessing technology to create innovative solutions and eager to contribute my skills in a professional environment.</p>
+        <p class="text_4">I am excited to use technology to create new solutions.</p>
+    </div>
+    <div class="img_wrapper" id="contact_box2">
+        <img src="img/I.JPG" alt="Denys is smiling">
+    </div>
+</div>
+</header>
+<!-- Main ↓ -->
+<main class="main">
+    <!-- My last Projects ↓ -->
+    <div class="container_2">
+        <div class="projects_text" id="projects">My last Projects</div>
+            <div class="gallery_wrapper">
+                <div class="gallery">
+                    <div class="gallery_item item_1"><img src="img/Adobe_Illustrator.svg" class="clickable-image" data-title="Adobe Illustrator" data-info="Here is my works in Adobe Illustrator" data-images="img/G_class.jpg"></div>
+                    <div class="gallery_item item_2"><img src="img/Adobe_Premiere_Pro.svg" class="clickable-image" data-title="Adobe Premiere Pro" data-info="Here is my works in Adobe Premiere Pro" data-images="image3.jpg,image4.jpg"></div>
+                    <div class="gallery_item item_3"><img src="img/Adobe_After_Effects.svg" class="clickable-image" data-title="Adobe After Effects" data-info="Here is my works in Adobe After Effects" data-images="image2.jpg,image3.jpg"></div>
+                    <div class="gallery_item item_4"><img src="img/Big_project.svg" class="clickable-image" data-title="Basketball team" data-info="In this project, I independently created the logo, banners, and design manual for a basketball team in Oslo." data-images="img/Big_Project_1.jpg,img/Big_Project_2.jpg"></div>
+                    <div class="gallery_item item_5"><img src="img/Network.svg" class="clickable-image" data-title="Network" data-info="In this project, my classmate and I set up a local network consisting of multiple computers connected via a switch and a wireless router." data-images="img/Network.jpg"></div>
+                    <div class="gallery_item item_6"><img src="img/Web_hosting.svg" class="clickable-image" data-title="Github" data-info="This is an example of me uploading my webpage to GitHub." data-images="img/Github.png"></div>
 
-        <!--Navigasjonsmeny ↑-->
-
-        <!-- About me ↓ -->
-
-        <div class="container_1">
-            <div class="intro_text" id="contact_box1">
-                <p class="text_1">Hi, I am Denys Koval</p>
-                <p class="text_2">Student specializing in IT</p>
-                <p class="text_3">I am passionate about harnessing technology to create innovative solutions and eager to contribute my skills in a professional environment.</p>
-                <p class="text_4">I am excited to use technology to create new solutions.</p>
-            </div>
-            <div class="img_wrapper" id="contact_box2">
-                <img src="img/I.JPG" alt="Denys is smiling">
-            </div>
-        </div>
-        <!-- About me ↑ -->
-
-    </header>
-
-    <!-- Forsiden er plassert helt innenfor header-taggen. ↑ -->
-
-    <main class="main">
-
-        <!-- Bildegalleri ↓ -->
-
-        <div class="container_2">
-            <div class="projects_text" id="projects">My last Projects</div>
-                <div class="gallery_wrapper">
-                    <div class="gallery">
-                        <div class="gallery_item item_1"><img src="img/Adobe_Illustrator.svg" class="clickable-image" data-title="Adobe Illustrator" data-info="Here is my works in Adobe Illustrator" data-images="img/G_class.jpg"></div>
-                        <div class="gallery_item item_2"><img src="img/Adobe_Premiere_Pro.svg" class="clickable-image" data-title="Adobe Premiere Pro" data-info="Here is my works in Adobe Premiere Pro" data-images="image3.jpg,image4.jpg"></div>
-                        <div class="gallery_item item_3"><img src="img/Adobe_After_Effects.svg" class="clickable-image" data-title="Adobe After Effects" data-info="Here is my works in Adobe After Effects" data-images="image2.jpg,image3.jpg"></div>
-                        <div class="gallery_item item_4"><img src="img/Big_project.svg" class="clickable-image" data-title="Basketball team" data-info="In this project, I independently created the logo, banners, and design manual for a basketball team in Oslo." data-images="img/Big_Project_1.jpg,img/Big_Project_2.jpg"></div>
-                        <div class="gallery_item item_5"><img src="img/Network.svg" class="clickable-image" data-title="Network" data-info="In this project, my classmate and I set up a local network consisting of multiple computers connected via a switch and a wireless router." data-images="img/Network.jpg"></div>
-                        <div class="gallery_item item_6"><img src="img/Web_hosting.svg" class="clickable-image" data-title="Github" data-info="This is an example of me uploading my webpage to GitHub." data-images="img/Github.png"></div>
-
-                        <div id="modal" class="modal">
-                            <div class="modal-content">
-                              <span class="close" id="closeModal">&times;</span>
-                              <h2 id="modalTitle">Lacrosse</h2>
-                              <div id="modalImages"></div>
-                              <p id="modalText">Info</p>
-                            </div>
-                          </div>
-                    </div>
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                          <span class="close" id="closeModal">&times;</span>
+                          <h2 id="modalTitle">Lacrosse</h2>
+                          <div id="modalImages"></div>
+                          <p id="modalText">Info</p>
+                        </div>
+                      </div>
                 </div>
             </div>
-
-        <!-- Bildegalleri ↑ -->
-
-        <!-- Utdanning ↓ -->
-
+        </div>
+    <!-- Education ↓ -->
         <div class="container_3">
             <div class="projects_text" id="education">Education</div>
-           
             <div class="timeline-container">
                 <div class="timeline"></div>
-        
                 <div class="timeline-item timeline-item-right">
                     <div class="timeline-item-content"><p>143rd Secondary School in Ukraine</p><p>(2010 - 2019)</p></div>
                     <div class="dot"></div>
                 </div>
-        
                 <div class="timeline-item timeline-item-left">
                     <div class="dot"></div>
                     <div class="timeline-item-content"><p>Private School of Technology and Business in Slovakia</p><p>(2019 - 2022)</p></div>
                 </div>
-        
                 <div class="timeline-item timeline-item-right">
                     <div class="timeline-item-content"><p>Norwegian Language Course in Norway</p><p>(2022 - 2024)</p></div>
                     <div class="dot"></div>
                 </div>
-
                 <div class="timeline-item timeline-item-left">
                     <div class="dot"></div>
                     <div class="timeline-item-content"><p>Secondary School of IT and Media in Norway</p><p>(2024 - Present)</p></div>
                 </div>
             </div>
 
-        </div>        
+        </div> 
     </main>
+    <!-- Footer ↓ -->
     <footer class="footer">
         <p class="footer_name">Denys Koval</p>
         <p class="footer_p">

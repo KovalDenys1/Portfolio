@@ -50,14 +50,14 @@ html{
     position: absolute;
     width: 50px;
     height: 50px;
-    border: 2.5px solid rgba(0, 0, 0, 0.7); /* Только обводка */
-    border-radius: 50%; /* Для круга */
-    pointer-events: none; /* Игнорируем клики */
-    transition: transform 0.7s ease-out; /* Плавное движение */
+    border: 2.5px solid rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    pointer-events: none; /* Ignoring clicks */
+    transition: transform 0.7s ease-out; /* Smooth movement */
 }
-/* Для квадратов */
+/* For squares */
 .shape.square {
-    border-radius: 0; /* Убираем скругление */
+    border-radius: 0;
 }
 @keyframes float {
     0%, 100% {
@@ -148,6 +148,19 @@ nav a:hover{
     gap: 24px;
     height: 100%;
     width: 50%;
+    padding: 0rem;
+}
+.intro_text, .img_wrapper {
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  .intro_text.slide-out, .img_wrapper.slide-out {
+    transform: translateY(100%); /* Hiding the block downward */
+    opacity: 0;
+}
+
+.intro_text.slide-in, .img_wrapper.slide-in {
+    transform: translateY(0); /* Restore to the original position */
+    opacity: 1;
 }
 .text_2, .text_3{
     font-size: clamp(1rem, 1.5vw, 4rem);
@@ -161,6 +174,56 @@ nav a:hover{
     width: 50%;
     height: 100%;
     justify-content: right;
+    padding: 0rem;
+    gap: 0rem;
+}
+.img_wrapper form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+}
+.img_wrapper input{
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    padding: 5px 0;
+    font-size: 16px;
+    width: 100%;
+    background: transparent;
+    transition: border-bottom-color 0.5s ease;
+    color: white;
+}
+.img_wrapper button {
+    background-color: #285eb6;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    font-size: clamp(0.5rem, 1.5vw, 4rem);
+    font-weight: bold;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.img_wrapper button:hover {
+    background-color: #285eb6;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.img_wrapper button:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+.About_me_text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.img_wrapper input:hover {
+    border-bottom-color: #007BFF;
+}
+.img_wrapper input:focus {
+    border-bottom-color: #007BFF;
 }
 .img_wrapper img{
     max-width: 100%;
@@ -179,9 +242,6 @@ main{
     height: 10vh;
     padding: 1.25rem;
 }
-
-
-
 .gallery_wrapper {
     display: flex;
     padding: 1.25rem 3.125rem;
@@ -199,9 +259,6 @@ main{
     transition: transform 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
-
 .gallery_item img,
 .gallery_item video {
     width: 100%;
@@ -215,76 +272,75 @@ main{
 .gallery_item img:hover {
     filter: brightness(0.9) saturate(1.2);
 }
-
-/* Стиль для модального окна */
 .modal {
-    display: none; /* Изначально окно скрыто */
-    position: fixed; /* Фиксированное позиционирование */
-    z-index: 1; /* Окно будет поверх контента */
+    display: none; /* Initially, the window is hidden */
+    position: fixed; /* Fixed positioning */
+    z-index: 1; /* The window will be above the content */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
-  }
-  
-  /* Стили для содержимого модального окна */
-  .modal-content {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+/* Styles for the modal content */
+.modal-content {
     background-color: #ffffff;
     margin: 5% auto;
     padding: 20px;
     width: 80%;
-    height: 80%; /* Максимальная высота окна — 80% от высоты окна браузера */
-    overflow-y: auto; /* Добавляем вертикальную прокрутку */
-  }
-  
-/* Для браузеров на основе Webkit (Chrome, Safari, Edge) */
-.modal-content::-webkit-scrollbar {
-    width: 20px; /* Ширина скроллбара */
-  }
-  
-  .modal-content::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Цвет фона скроллбара */
-    border-radius: 10px; /* Скругление углов */
-  }
-  
-  .modal-content::-webkit-scrollbar-thumb {
-    background-color: #888; /* Цвет ползунка */
-    border-radius: 10px; /* Скругление ползунка */
-  }
-  
-  .modal-content::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Цвет ползунка при наведении */
-  }
+    height: 80%; /* Maximum height of the window is 80% of the browser window height */
+    overflow-y: auto; /* Add vertical scroll */
+}
 
-  /* Кнопка закрытия */
-  .close {
+/* For Webkit-based browsers (Chrome, Safari, Edge) */
+.modal-content::-webkit-scrollbar {
+    width: 20px; /* Scrollbar width */
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Scrollbar track color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Thumb color */
+    border-radius: 10px; /* Rounded thumb */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Thumb color on hover */
+}
+
+/* Close button */
+.close {
     color: #aaa;
     font-size: 1.5rem;
     font-weight: bold;
     position: absolute;
     top: 10px;
     right: 25px;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-  
-  /* Стили для картинок внутри модального окна */
-  .modal-image {
+}
+
+/* Styles for images inside the modal */
+.modal-image {
     height: 50%;
     width: auto;
     margin-bottom: 10px;
-  }
-  
-  /* Стили для картинок, которые открывают модальное окно */
-  .clickable-image {
+}
+
+/* Styles for images that open the modal */
+.clickable-image {
     cursor: pointer;
-  }
+}
+
   
 .timeline-container {
     flex-grow: 1;
@@ -357,7 +413,7 @@ footer a:hover{
     color: rgb(80, 80, 80);
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .shape:nth-child(n+8) { /* Оставляем только 7 фигур */
+    .shape:nth-child(n+8) { /* Keep only 7 shapes */
         display: none;
     }
     .nav_menu{
@@ -406,7 +462,7 @@ footer a:hover{
     }
 }
 @media screen and (max-width: 767px) {
-    .shape:nth-child(n+6) { /* Оставляем только первые 5 фигур */
+    .shape:nth-child(n+6) { /* Keep only 5 shapes */
         display: none;
     }
     .header{
