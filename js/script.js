@@ -71,6 +71,8 @@ document.querySelectorAll(".nav_link").forEach(n => n.addEventListener("click", 
     body.style.overflow = "auto";  // Enable page scrolling when the menu closes
 }));
 
+
+// About me button ↓
 let isContactActive = false; // Flag to track the state
 
 // Save the initial states
