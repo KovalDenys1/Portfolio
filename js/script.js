@@ -94,7 +94,13 @@ document.getElementById("contact").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent the default link behavior
 
     if (!isContactActive) {
-        // If the "Contact" state is not active, change the content
+        
+        contactBox1.classList.add("slide-out");
+        contactBox2.classList.add("slide-out");
+
+        setTimeout(() => {
+
+            // If the "Contact" state is not active, change the content
         contactBox1.innerHTML = `
         <div class="About_me_text">
           <p class="text_1">About me</p>
@@ -121,11 +127,6 @@ document.getElementById("contact").addEventListener("click", function(event) {
                 <button type="submit">Contact me</button>
             </form>
         `;
-
-        contactBox1.classList.add("slide-out");
-        contactBox2.classList.add("slide-out");
-
-        setTimeout(() => {
             contactBox1.classList.remove("slide-out");
             contactBox2.classList.remove("slide-out");
 
