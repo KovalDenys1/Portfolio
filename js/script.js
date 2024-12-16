@@ -150,7 +150,7 @@ document.getElementById("contact").addEventListener("click", function(event) {
             contactBox2.classList.remove("slide-in");
 
             isContactActive = true; // Update the flag
-        }, 500); // 500 ms
+        }, 400); // 400 ms
     } else {
 
 
@@ -182,9 +182,56 @@ document.getElementById("contact").addEventListener("click", function(event) {
             contactBox2.classList.remove("slide-in");
 
             isContactActive = false; // Update the flag
-        }, 500); // 500 ms
+        }, 400); // 400 ms
     }
 });
+
+// Handler for the logo
+document.querySelector(".logo a").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Check if content is already in its original state
+    if (!isContactActive) return;
+
+    // Add slide-out animation classes
+    contactBox1.classList.add("slide-out");
+    contactBox2.classList.add("slide-out");
+
+    // Wait for the slide-out animation to finish before changing content
+    setTimeout(() => {
+        // Reset content and styles to their original state
+        contactBox1.innerHTML = originalContentBox1; // Restore the original content
+        contactBox2.innerHTML = originalContentBox2;
+
+        contactBox1.style.padding = originalPaddingBox1;
+        contactBox2.style.padding = originalPaddingBox2;
+        contactBox1.style.background = originalbackgroundBox1;
+        contactBox2.style.background = originalbackgroundBox2;
+        contactBox1.style.color = originalcolorBox1;
+        contactBox2.style.color = originalcolorBox2;
+        contactBox2.style.justifyContent = originaljustifyContentBox2;
+        contactBox2.style.alignItems = originalalignItemsBox2;
+        contactBox1.style.boxShadow = originalBoxShadowBox1;
+        contactBox2.style.boxShadow = originalBoxShadowBox2;
+
+        // Remove slide-out and add slide-in animation
+        contactBox1.classList.remove("slide-out");
+        contactBox2.classList.remove("slide-out");
+
+        contactBox1.classList.add("slide-in");
+        contactBox2.classList.add("slide-in");
+
+        // Remove slide-in classes after animation ends
+        setTimeout(() => {
+            contactBox1.classList.remove("slide-in");
+            contactBox2.classList.remove("slide-in");
+        }, 400);
+
+        // Update the state flag
+        isContactActive = false;
+    }, 400);
+});
+
 
 
 const background = document.querySelector('.background');
