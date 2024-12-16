@@ -232,7 +232,7 @@ document.querySelector(".logo a").addEventListener("click", function (event) {
     }, 400);
 });
 
-
+// Background js ↓
 
 const background = document.querySelector('.background');
 // Fixed positions for the shapes
@@ -295,6 +295,8 @@ function moveShapes(event) {
 createShapes();
 window.addEventListener('mousemove', moveShapes);
 
+// Modal window ↓
+
 // Get modal elements
 var modal = document.getElementById("modal");
 var closeModal = document.getElementById("closeModal");
@@ -308,17 +310,17 @@ var clickableImages = document.querySelectorAll(".clickable-image");
 // Function to open the modal
 function openModal(event) {
   var clickedImage = event.target;
-  
+
   // Get data from image attributes
   var title = clickedImage.getAttribute("data-title");
   var text = clickedImage.getAttribute("data-info");
   var images = clickedImage.getAttribute("data-images").split(",");
-  
+
   // Update modal title, text, and images
   modalTitle.textContent = title;
   modalText.textContent = text;
   modalImages.innerHTML = ""; // Clear previous images
-  
+
   images.forEach(function(image) {
     var imgElement = document.createElement("img");
     imgElement.src = image;
@@ -329,17 +331,19 @@ function openModal(event) {
 
   // Disable page scrolling
   document.body.style.overflow = "hidden";
-  
-  // Display the modal
-  modal.style.display = "block";
+
+  // Display the modal with animation
+  modal.classList.add("show");
 }
 
 // Function to close the modal
 function closeModalWindow() {
-  modal.style.display = "none";
-  
-  // Enable page scrolling again
-  document.body.style.overflow = "auto";
+  modal.classList.remove("show");
+
+  // Enable page scrolling after animation
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+  }, 300); // Delay matches transition duration
 }
 
 // Close modal when clicking the close button
@@ -350,9 +354,26 @@ window.onclick = function(event) {
   if (event.target == modal) {
     closeModalWindow();
   }
-}
+};
 
 // Add event listeners to all clickable images
 clickableImages.forEach(function(image) {
   image.addEventListener("click", openModal);
+});
+
+// Gallery animation ↓
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('.timeline-item').forEach(item => {
+    observer.observe(item);
 });
