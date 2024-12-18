@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="APP" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .h {
+        fill: #fff;
+      }
+
+      .i {
+        fill: none;
+        stroke: #231f20;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .j {
+        fill: #231f20;
+        font-family: LeagueSpartan-Regular, 'League Spartan';
+        font-size: 32px;
+        font-variation-settings: 'wght' 400;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="BG">
+    <rect id="d" data-name="3" class="h" x="399.77" y="0" width="400" height="400"/>
+    <rect id="e" data-name="2" class="h" x="-.02" y="0" width="400" height="400"/>
+    <rect id="f" data-name="1" class="h" x="-399.72" y="0" width="400" height="400"/>
+  </g>
+  <g id="g" data-name="Text">
+    <text class="j" transform="translate(159.89 209.76)"><tspan x="0" y="0">Figma</tspan></text>
+  </g>
+  <line class="i" x1="-93.36" y1="222.89" x2="47.81" y2="800"/>
+  <line class="i" x1="211.22" y1="800" x2="484.96" y2="0"/>
+  <line class="i" x1="161.98" y1="0" x2="-50.03" y2="400"/>
+  <line class="i" x1="90.42" y1="0" x2="-399.77" y2="188.11"/>
+  <line class="i" x1="389.14" y1="280.03" x2="252.35" y2="0"/>
+  <line class="i" x1="351.95" y1="203.91" x2="-147.37" y2="530.21"/>
+  <line class="i" x1="60.2" y1="394.56" x2="184.23" y2="800"/>
+  <line class="i" x1="313.75" y1="500.35" x2="-110.67" y2="77.17"/>
+</svg>

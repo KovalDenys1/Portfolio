@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="WH" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .i {
+        fill: #fff;
+      }
+
+      .j {
+        fill: none;
+        stroke: #231f20;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .k {
+        fill: #231f20;
+        font-family: LeagueSpartan-Regular, 'League Spartan';
+        font-size: 32px;
+        font-variation-settings: 'wght' 400;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="BG">
+    <rect id="d" data-name="6" class="i" x="0" y="0" width="400" height="400"/>
+    <rect id="e" data-name="5" class="i" x="-399.79" y="0" width="400" height="400"/>
+    <rect id="f" data-name="3" class="i" x="0" y="-400" width="400" height="400"/>
+    <rect id="g" data-name="2" class="i" x="-399.79" y="-400" width="400" height="400"/>
+  </g>
+  <g id="h" data-name="Text">
+    <text class="k" transform="translate(153.03 209.89)"><tspan x="0" y="0">GitHub</tspan></text>
+  </g>
+  <line class="j" x1="-188.55" y1="400" x2="85.19" y2="-400"/>
+  <line class="j" x1="85.19" y1="134.73" x2="8.08" y2="400"/>
+  <polyline class="j" points="-33.04 400 -102.82 149.47 399.95 110.04"/>
+  <polyline class="j" points="96.16 -159.52 234.21 123.04 318.74 -92.16"/>
+  <polyline class="j" points="64.17 207.06 226.56 400 399.95 169.98"/>
+</svg>
