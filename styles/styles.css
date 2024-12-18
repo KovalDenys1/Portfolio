@@ -216,7 +216,7 @@ nav a:hover{
     color: white;
 }
 .img_wrapper button {
-    background-color: #285eb6;
+    background-color: #0085D5;
     color: white;
     border: none;
     padding: 0.5rem;
@@ -227,7 +227,7 @@ nav a:hover{
     transition: all 0.3s ease;
 }
 .img_wrapper button:hover {
-    background-color: #285eb6;
+    background-color: #0085D5;
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
@@ -238,7 +238,6 @@ nav a:hover{
 .About_me_text{
     display: flex;
     flex-direction: column;
-    text-wrap: wrap;
     gap: 1.5rem;
 }
 .img_wrapper input:hover {
