@@ -109,7 +109,7 @@ document.getElementById("contact").addEventListener("click", function(event) {
           <p class="text_2">My name is Denys Koval, and I am 20 years old.</p>
           <p class="text_2">Skills: JavaScript, HTML, CSS and Adobe programs</p>
           <p class="text_2">Hobbies: Gaming, table tennis, snowboarding</p>
-          <p class="text_2">Email: kovaldenys993@gmail.com</p>
+          <p class="text_2"><a href="https://youtu.be/Yy4JrnNKIvI" class="youtube_video">Video about me</a></p>
         </div>
         `; 
         contactBox2.innerHTML = `

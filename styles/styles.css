@@ -204,6 +204,12 @@ nav a:hover{
         gap: 1rem;
         width: 100%;
 }
+.youtube_video{
+    color: white;
+}
+.youtube_video:hover{
+    color: #0085D5;
+}
 .img_wrapper input{
     border: none;
     border-bottom: 2px solid #ccc;
