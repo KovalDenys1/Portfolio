@@ -1,14 +1,9 @@
-# 🌐 Personal Portfolio Website
+# Portfolio
 
-This is my personal portfolio website where I showcase my projects, skills, and experience in IT and media. The design is clean, responsive, and built to work smoothly on all devices.
+Personal portfolio website.
 
-## 🔗 Live Demo
+**Live:** https://kovaldenys1.github.io/Portfolio/
 
-[🔗 Visit the live site](https://kovaldenys1.github.io/Portfolio/)
+## Stack
 
-## 🛠️ Built With
-
-- HTML5
-- CSS3 / SCSS
-- JavaScript
-- Vite
+HTML · CSS · JavaScript · Vite
